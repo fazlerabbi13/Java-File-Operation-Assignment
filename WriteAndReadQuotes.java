@@ -10,7 +10,7 @@ public class WriteAndReadQuotes {
             "Dream big and work hard."
         };
 
-        // Write quotes to file
+       
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("quotes.txt"))) {
             for (String quote : quotes) {
                 writer.write(quote);
@@ -20,16 +20,16 @@ public class WriteAndReadQuotes {
             e.printStackTrace();
         }
 
-        // Read and print quotes with line numbers
-        // try (BufferedReader reader = new BufferedReader(new FileReader("quotes.txt"))) {
-        //     String line;
-        //     int lineNumber = 1;
-        //     while ((line = reader.readLine()) != null) {
-        //         System.out.println(lineNumber + ". " + line);
-        //         lineNumber++;
-        //     }
-        // } catch (IOException e) {
-        //     e.printStackTrace();
-        // }
+        
+        try (BufferedReader reader = new BufferedReader(new FileReader("quotes.txt"))) {
+            String line;
+            int lineNumber = 1;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(lineNumber + ". " + line);
+                lineNumber++;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
