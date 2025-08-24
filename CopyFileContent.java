@@ -7,7 +7,7 @@ import java.io.IOException;
 public class CopyFileContent {
       public static void main(String[] args) {
         try (
-            BufferedReader reader = new BufferedReader(new FileReader("input.txt"));
+            BufferedReader reader = new BufferedReader(new FileReader("quotes.txt"));
             BufferedWriter writer = new BufferedWriter(new FileWriter("output.txt"));
              ) {
 
